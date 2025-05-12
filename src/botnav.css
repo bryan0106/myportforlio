@@ -1,0 +1,113 @@
+
+
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+    body {margin:0}
+    .icon-bar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+    height: 65px;
+    position: fixed; /* Make topnav fixed */
+    bottom: 0;          /* Stick it to the top */
+    right: 0;
+    width: 100%;
+    max-width: 100%;
+    justify-content: left;
+    background-color: #838383; /* Ensure a background color is set */
+    z-index: 1000;   
+  }
+  
+  .icon-bar img {
+    width: 20px; /* Adjust width */
+    height: 20px; /* Adjust height */
+ 
+  }
+ 
+  .icon-bar a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+
+    
+  }
+  
+  .icon-bar a:hover {
+    
+    background-color: #04AA6D;
+  }
+  
+  .icon-bar .active {
+    background-color: #04AA6D;
+  }
+ 
+
+
+
+
+
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+   
+
+    body {margin:0}
+
+    .icon-bar {
+      background-color: #555;
+      position: fixed; 
+      display: block;/* Make topnav fixed */
+    bottom: 100px;          /* Stick it to the top */
+    right: 15px;
+    width: 40px;
+    height: 200px;
+    max-width: 100%;
+    background-color: transparent   ;
+    z-index: 1000; 
+    
+    }
+    
+  .icon-bar img {
+    width: 30px; /* Adjust width */
+    height: 30px; /* Adjust height */
+    display: flexbox;
+    position: relative;
+    right: 5px;
+    bottom: 5px;
+    margin-top: 10px;
+ margin-left: 10px;
+  }
+ 
+  
+    .icon-bar a {
+      display:block;
+      right : 100px;
+      transition: all 0.3s ease;
+      color: rgb(99, 99, 99);
+      width: 40px; /* Adjust width */
+      height: 40px; /* Adjust height */
+      border-radius: 50%;
+      border: solid ;
+      justify-content: center;
+align-items: center ;
+
+      
+    }
+    
+    .icon-bar a:hover {
+      background-color: #858080;
+    }
+    
+    .icon-bar  .active {
+      background-color: #d60101;
+      border-radius: 50%;
+    }
+
+    
+}
