@@ -97,6 +97,7 @@ justify-content: center;
 
 
 
+
 .first img{
     width: 180px;
     height: 180px;
@@ -123,6 +124,11 @@ justify-content: center;
     width: 40px; /* Adjust width */
     height: 40px; 
   }
+
+
+
+
+
 
 
 .cont p{
@@ -169,10 +175,10 @@ justify-content: center;
 
 
 .tab {
-  overflow: hidden;
+    display: flex;
+    position: relative;
   
-  margin-left: 0;
-  margin-right: 100px;
+  
 }
 
 /* Style the buttons inside the tab */

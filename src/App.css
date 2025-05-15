@@ -51,7 +51,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction:column; /* Changed to column */
-  align-content: start;
+  align-content: center;
   margin-top: 46px;
   justify-content:flex-start;
 }
@@ -113,6 +113,9 @@
   align-items: flex-start; /* Align items to the left horizontally */
   gap: 1px; /* Add some space between the lines (optional) */
 }
+.skill:hover{
+  border: 1px solid black;
+}
 
 
 @media (max-width: 600px) {
@@ -132,6 +135,46 @@
   .contact-info2 {
     bottom: 1%; /* Keep the second one at the bottom */
   }
+
+
+  .profile-container {
+  width: 23rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute; /* To position it relative to its closest positioned ancestor */
+  top: 0; /* Stick it to the top */
+  left: 50%; /* Center it horizontally (initially) */
+  transform: translateX(-50%); /* Adjust for the element's width to truly center */
+   margin-top: 20px; 
+   margin-bottom: 30px;
+  /* margin-bottom: 20px; Remove bottom margin (if it was there) */
+}
+.contact-info {
+  display: flex;
+  flex-direction: column; /* Arrange items vertically */
+  width: auto; /* Adjust width based on content */
+  max-width: 20rem; /* Maximum width */
+  position: fixed;
+ margin-bottom: -25px;
+  align-items: flex-start; /* Align items to the left horizontally */
+  gap: 1px; /* Add some space between the lines (optional) */
+}
+
+.contact-info2 {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column; /* Arrange items vertically */
+  width: auto; /* Adjust width based on content */
+  max-width: 20rem; /* Maximum width */
+  position: fixed;
+margin-bottom: 5px;
+  align-items: flex-start; /* Align items to the left horizontally */
+  gap: 1px; /* Add some space between the lines (optional) */
+}
+.contact-details{height: 38px;}
+.social-icons{height: 38px;}
+
 }
 
 

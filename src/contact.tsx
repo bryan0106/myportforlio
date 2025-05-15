@@ -17,6 +17,7 @@ function ContactSection({activeSection}){
     </div>
 
 <div className="contactD">
+
   <div className="conAd"><h2>Address:</h2><p>Sta. Maria, Naujan Oriental Mindoro</p></div>
   <div className="conSo"><h2>Social Media account:</h2>
   <div className="social-icons">
@@ -58,7 +59,10 @@ function ContactSection({activeSection}){
                             </a>
                         </div>
   </div>
-  <div className="conEm"><h2>Email Address:</h2>
+  <div className="conEm">
+    
+    
+    <h2>Email Address:</h2>
     <p>dalawampubryan06@gmailo.com</p>
     <p>dalawampubryan@yahoo.com</p>
   

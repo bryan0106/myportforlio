@@ -1,14 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import type { workexp } from './types/work';
+import workdb from './data/workexp.json'
 import './Experience.css'
-
-
-
-
-
-
-
-
-
 
 
 function ExperienceSection({ activeSection, activeWork, handleWork }) {
@@ -19,6 +12,40 @@ const [modalx, setmodalx] = useState('workleftx')
  const showmodal = (section: string) => {
       setmodalx(section);
   };
+
+const [workexp, setworkexp] = useState<workexp[]>([]);
+
+useEffect(() => {
+    const fetchWorkExp = async () => { // Changed function name to fetchWorkExp
+        try {
+            // Use a relative path to your JSON file in the public directory
+            const response = await fetch('/workexp.json'); // Changed to workexp.json
+            const data: workexp[] = await response.json();
+            setworkexp(data);
+        } catch (error) {
+            console.error("Failed to fetch work experience:", error); // Changed error message
+            // In a real app, you might set an error state, but as requested,
+            // I'm keeping it very simple.
+        }
+    };
+    fetchWorkExp(); // Changed function call to fetchWorkExp
+}, []); // Added empty dependency array
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   return (
@@ -33,31 +60,28 @@ const [modalx, setmodalx] = useState('workleftx')
               <h3>  OFW South Korea (Factory Worker)</h3>
                 <p className="skt">Skills acquired:</p>
                 <ul>
-                  <li>Self-improvement</li>
-                  <li>Precision and Attention to Detail</li>
-                  <li>Technical Aptitude (Hands-on)</li>
-                  <li>Teamwork and Collaboration</li>
-                  <li>Discipline and Work Ethic</li>
-                  <li>Resilience and Perseverance</li>
-                  <li>Communication (Cross-Cultural)</li>
+               { workdb.filter(workexp => workexp.cat === "third" &&  workexp.sub === "SKA" ) // Example: Filter by category
+                  .map((workexp) => (
+                    <li key={workexp.id}>{workexp.content}</li>
+                   ))}
                 </ul>
               </div>
               <div className="wlcon">
                 <p className="skt">Responsibilities:</p>
                 <ul>
-                  <li>Operate machinery for double glazing mirror production.</li>
-                  <li>Inspect finished mirrors for quality and defects.</li>
-                  <li>Adhere to safety protocols and guidelines during mirror manufacturing.</li>
-                  <li>Maintain a clean and safe working environment in the mirror production area.</li>
-                  <li>Package mirrors according to specifications for shipment.</li>
+                  { workdb.filter(workexp => workexp.cat === "third" &&  workexp.sub === "RSP" ) // Example: Filter by category
+                  .map((workexp) => (
+                    <li key={workexp.id}>{workexp.content}</li>
+                   ))}
                 </ul>
               </div>
               <div className="wlcon">
                 <p className="skt">IT Related Experience:</p>
                 <ul>
-                  <li>Creating Web application(During day off)</li>
-                  <li>Create macro vba excel program (LOTTO Generator)</li>
-                  <li>Practise AI chatbo prompt openAI(chatgpt,gemini,qwen)</li>
+                  { workdb.filter(workexp => workexp.cat === "third" &&  workexp.sub === "ITR" ) // Example: Filter by category
+                  .map((workexp) => (
+                    <li key={workexp.id}>{workexp.content}</li>
+                   ))}
                 </ul>
               </div>
             </div>
@@ -68,35 +92,28 @@ const [modalx, setmodalx] = useState('workleftx')
                 <h3> Kily.ph (SOLO IT staff)</h3>
                 <p className="skt">Skills acquired:</p>
                 <ul>
-                  <li>Windows Server Administration</li>
-                  <li>Active Directory Management</li>
-                  <li>Adaptability</li>
-                  <li>Learning Agility | Work Under Pressure</li>
-                  <li>Multimedia Skills: Photo Editing</li>
-                  <li>Marketing Skills</li>
-                  <li>VBA Macro Programming</li>
+                   { workdb.filter(workexp => workexp.cat === "Second" &&  workexp.sub === "SKA" ) // Example: Filter by category
+                  .map((workexp) => (
+                    <li key={workexp.id}>{workexp.content}</li>
+                   ))}
                 </ul>
               </div>
               <div className="wlcon">
                 <p className="skt">Responsibilities: (SOLO IT Staff)</p>
                 <ul>
-                  <li>Install, configure, and maintain computer hardware, operating systems (including Windows Server), and applications.</li>
-                  <li>Administer Windows Server, including Active Directory, to manage user accounts, groups, permissions, and access controls.</li>
-                  <li>Manage file and print services using Windows Server.</li>
-                  <li>Monitor and maintain computer software, hardware, and networks to ensure optimal performance and stability.</li>
-                  <li>Diagnose hardware, software, and network faults, and resolve technical and application problems remotely or on-site.</li>
-                  <li>Perform on-site maintenance at branch locations, including troubleshooting and replacing hardware components.</li>
-                  <li>Test and evaluate new technologies for potential company-wide implementation.</li>
-                  <li>Perform other IT-related duties as assigned.</li>
+                   { workdb.filter(workexp => workexp.cat === "Second" &&  workexp.sub === "RSP" ) // Example: Filter by category
+                  .map((workexp) => (
+                    <li key={workexp.id}>{workexp.content}</li>
+                   ))}
                 </ul>
               </div>
               <div className="wlcon">
                 <p className="skt">IT Related Experience:</p>
                 <ul>
-                  <li>Photo Editing (Photoshop &Illustrator) | Video Editing</li>
-                  <li>Website Testing (with chinese IT)</li>
-                  <li>Create APK App</li>
-                  <li>Create fully Funtional macro excel VBA application</li>
+                   { workdb.filter(workexp => workexp.cat === "Second" &&  workexp.sub === "ITR" ) // Example: Filter by category
+                  .map((workexp) => (
+                    <li key={workexp.id}>{workexp.content}</li>
+                   ))}
                 </ul>
               </div>
             </div>
@@ -107,35 +124,27 @@ const [modalx, setmodalx] = useState('workleftx')
                <h3>  Tambuting Pawnshop Head Office (IT Staff)</h3>
                 <p className="skt">Skills acquired:</p>
                 <ul>
-                  <li>Hardware setup | OS configuration</li>
-                  <li>Software install | System monitoring</li>
-                  <li>Network maintenance | Fault diagnosis</li>
-                  <li>Problem solving</li>
-                  <li>On-site repair | Remote support</li>
-                  <li>Tech evaluation</li>
-                  <li>IT support</li>
+                  { workdb.filter(workexp => workexp.cat === "First" &&  workexp.sub === "SKA" ) // Example: Filter by category
+                  .map((workexp) => (
+                    <li key={workexp.id}>{workexp.content}</li>
+                   ))}
                 </ul>
               </div>
               <div className="wlcon">
                 <p className="skt">Responsibilities:</p>
                 <ul>
-                  <li>Installing and configuring computer hardware operating system and applications.</li>
-                  <li>Monitoring and maintaining computer software , hardware as well as networks;</li>
-                  <li>Diagnosing hardware, software and network faults and solve technical and application problems, either over the phone or in person.</li>
-                  <li>Perform remote desktop and application support requested by branches.</li>
-                  <li>Testing and evaluating new technology acquired on the company.</li>
-                  <li>Any other duties relating to IT as requested.</li>
+                 { workdb.filter(workexp => workexp.cat === "First" &&  workexp.sub === "RSP" ) // Example: Filter by category
+                  .map((workexp) => (
+                    <li key={workexp.id}>{workexp.content}</li>
+                   ))}
                 </ul>
               </div>
               <div className="wlcon">
                 <p className="skt">IT Related Experience:</p>
-                <ul>
-                  <li>Publish VB6 software in Windows Server</li>
-                  <li>Windows Server Management</li>
-                  <li>Creating self-extracting archive (SFX) for branch software version update</li>
-                  <li>Create simple C# porgram for audit department.</li>
-                  <li>create excel macro VBA program</li>
-                </ul>
+                { workdb.filter(workexp => workexp.cat === "First" &&  workexp.sub === "ITR" ) // Example: Filter by category
+                  .map((workexp) => (
+                    <li key={workexp.id}>{workexp.content}</li>
+                   ))}
               </div>
             </div>
           )}
@@ -145,22 +154,19 @@ const [modalx, setmodalx] = useState('workleftx')
                <h3>  TESDA Calapan (OJT)</h3>
                 <p className="skt">Skills acquired:</p>
                 <ul>
-                  <li>Data entry | Database use</li>
-                  <li>Record keeping</li>
-                  <li>Customer assist</li>
-                  <li>Basic finance</li>
-                  <li>Detail-oriented</li>
-                  <li>Workflow awareness</li>
+                 { workdb.filter(workexp => workexp.cat === "OJT" &&  workexp.sub === "SKA" ) // Example: Filter by category
+                  .map((workexp) => (
+                    <li key={workexp.id}>{workexp.content}</li>
+                   ))}
                 </ul>
               </div>
               <div className="wlcon">
                 <p className="skt">Responsibilities:</p>
                 <ul>
-                  <li>Assist customers in the process of claiming their National Certificate II (NCII).</li>
-                  <li>Collect fees associated with NCII certification and Conduct daily sales audits to ensure accuracy</li>
-                  <li>Organize and maintain the stock of NCII certificate records.</li>
-                  <li>Manage all physical files and documents to prepare reports for the head office.</li>
-                  <li>Maintain and manage database access for filing and retrieving information.</li>
+                  { workdb.filter(workexp => workexp.cat === "OJT" &&  workexp.sub === "RSP" ) // Example: Filter by category
+                  .map((workexp) => (
+                    <li key={workexp.id}>{workexp.content}</li>
+                   ))}
                 </ul>
               </div>
             </div>

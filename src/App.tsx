@@ -1,8 +1,13 @@
 import React, { useState ,useEffect } from 'react';
+import JokeAPi from './publicapicat';
+
 import About  from './About';
 import EducSection from './Education'
 import ContactSection from './contact';
 import ExperienceSection from './experience';
+import SkillSection from './skills';
+import ProjectSetion from './project';
+
 
 import './App.css';
 import './topvab.css'
@@ -68,6 +73,7 @@ const FrontLoadPage: React.FC<FrontLoadPageProps> = ({ children, loadingText = '
                             </div>
                             <div className="progress-text">
                                 {progress < 100 ? `Loading: ${progress}%` : 'Loaded!'}
+                                <JokeAPi setans={progress < 100 ? `${progress}` : 'Loaded!'}/>
                             </div>
                         </div>
                     </div>
@@ -190,9 +196,9 @@ const [showMobileMenu, setShowMobileMenu] = useState(false);
                    activeSection={activeSection}
                    activeWork={activeWork}
                    handleWork={handleWork}/>
-
+<SkillSection activeSection={activeSection}/>
 <ContactSection activeSection={activeSection}/>
- 
+ <ProjectSetion activeSection={activeSection}/>
       </div>
     </>
   );

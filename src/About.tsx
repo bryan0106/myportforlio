@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import './About.css'; // Make sure this CSS file exists
 import { getAllskills } from "./api/skillsapi"; // Corrected import name
 import type { skills } from "./types/skills"; // Corrected import name
+
  // Corrected import name
 
 const AboutSection: React.FC<{ activeSection: string }> = ({ activeSection }) => {
@@ -81,19 +82,19 @@ const AboutSection: React.FC<{ activeSection: string }> = ({ activeSection }) =>
                     <p>Programming Skills</p>
                 <div className="tab">
   <button className="tablinks" onClick={() => handleskill('0')}>All</button>
-  <button className="tablinks" onClick={() => handleskill('Web')}>Website</button>
+  <button className="tablinks" onClick={() => handleskill('web')}>Website</button>
   <button className="tablinks" onClick={() => handleskill('exe')}>Software</button>
   <button className="tablinks" onClick={() => handleskill('app')}>Mobile App</button>
   <button className="tablinks" onClick={() => handleskill('data')}>Database</button>
 </div>
                 {activeSkill === "0" ? ( 
                   skillss.map((skill) => ( // Changed product to skill
-                               <img key={skill.id} className="skill" src={skill.source} alt={skill.name} />
+                               <><img key={skill.id} className="skill" src={skill.source} alt={skill.name} /></>
                         ))
                 ): 
-                  skillss.filter(skill => skill.category === activeSkill) // Example: Filter by category
+                  skillss.filter(skill => skill.cat === activeSkill) // Example: Filter by category
                   .map((skill) => (
-                    <img key={skill.id} className="skill" src={skill.source} alt={skill.name} />
+                    <><img key={skill.id} className="skill" src={skill.source} alt={skill.name} /></>
                    ))}
                       
                 </div>
@@ -104,6 +105,8 @@ const AboutSection: React.FC<{ activeSection: string }> = ({ activeSection }) =>
             
             <div className="second">
                 <div className="cont">
+
+                 
                     <p>
                         &nbsp;&nbsp;&nbsp; I'm Bryan, a programmer with a genuine enthusiasm for building software that solves
                         real-world problems. My strength lies in my analytical approach and ability to break down complex

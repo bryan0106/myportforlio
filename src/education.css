@@ -9,7 +9,6 @@ height: auto;
 display: flex;
 flex-direction: row;
 justify-content: center;
-
 }
 .cir{
     position: absolute;
@@ -19,7 +18,7 @@ justify-content: center;
     left: -22px;
     top: 15px;
     z-index:10 ;
-    background-color: rgb(19, 24, 165);
+    background-color: transparent;
 }
 .cir1{
     position: absolute;
@@ -31,18 +30,101 @@ justify-content: center;
     z-index:10 ;
     background-color: rgb(46, 44, 171);
 }
+  .cir img{
+    display: block;
+width: 60px;
+height: 60px;
+margin-top: -15px;
+margin-left: -15px;
+
+    transition: transform 1s;
+    transform-style: preserve-3d;
+
+            }
+.cir img:hover {
+    transform: rotateY(180deg);
+  }
+
+
+
+
+
 .scon{
    padding-left: 9%;
     margin-top: -2px;
     word-spacing:5px;
     line-height: 25px;
-
+    width: 100%;
 }
+.scon h1{
+    font-size: 25px;
+}
+.scon h2{
+    font-size: 20px;
+}
+.scon p{
+    font-size: 15px;
+}
+
+
+.scbac{
+width: 100%;
+border-radius: 5px;
+padding-left: 5px;
+ padding-right: 5px;
+border: 1px solid black;
+text-align: center;
+background-image: url("/elem.jpg");
+ background-size: 100% 100%;
+  background-repeat: no-repeat;
+margin-bottom: 10px;
+color:rgb(255, 255, 255)   ;
+transition: color 0.3s ease-in-out, background-image 0.3s ease-in-out; 
+}
+.scbac2{
+width: 100%;
+border-radius: 5px;
+padding-left: 5px;
+ padding-right: 5px;
+border: 1px solid black;
+text-align: center;
+background-image: url("/hgh.jpg");
+ background-size: 100% 100%;
+  background-repeat: no-repeat;
+color: white    ;
+margin-bottom: 10px;
+
+transition: color 0.3s ease-in-out, background-image 0.3s ease-in-out; 
+}
+.scbac3{
+width: 100%;
+border-radius: 5px;
+padding-left: 5px;
+ padding-right: 5px;
+border: 1px solid black;
+text-align: center;
+background-image: url("/coll.jpg");
+
+ background-size: 100% 100%;
+  background-repeat: no-repeat;
+color:rgb(255, 255, 255)   ;
+margin-bottom: 10px;
+transition: color 0.3s ease-in-out, background-image 0.3s ease-in-out; 
+}
+
+
+.scbac:hover, .scbac2:hover, .scbac3:hover {
+  color: black;
+  background-image: url("/scbac.png");
+}
+
 .sch1, .sch{
     position: relative;
     display: flex;
     width: 50%;
     margin-left: 2%;
+
+    
 }
 .sch1::after{
 content: '';
@@ -52,6 +134,7 @@ background-color: black;
 height: 100%;
 left:0;
 top: 30px;
+
 }
 @media (max-width: 768px) {
     .ed{
@@ -89,7 +172,9 @@ top: 30px;
                 top: 15px;
                 z-index:10 ;
                 background-color: rgb(19, 24, 165);
+              
             }
+          
             .cir1{
                 visibility: hidden;
                 position: absolute;
@@ -105,7 +190,6 @@ top: 30px;
                 padding-left: 8%;
                 margin-top: 5px;
                 width: 80%;
-                border: 1px solid black;
             }
             .scon h1{font-size: 23px;}
             .scon h2{font-size: 16px; line-height: auto ;}

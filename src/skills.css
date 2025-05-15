@@ -1,0 +1,126 @@
+
+.skillcontainer{
+    display: flex;
+    width: 70%;
+    max-width: 100%;
+    height: 500px;
+    justify-items: flex-start;
+}
+.Skleft{
+    float: left;
+    width:19.5%;
+    height: 300px;
+}
+
+.Skleft button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+
+
+
+.skright{
+    float: right;
+    width: 80%;
+    height: 300px;
+}
+.skicon{
+float: left;
+display: flex;
+flex-wrap: wrap;
+width: 50%;
+height: 250px;
+overflow: auto;
+}
+.sksk p{margin-top: 1px;}
+.sksk{
+    width: 100px;
+    display:block;
+    flex-wrap: nowrap;
+ line-height: 0;
+ margin-bottom: 2px;
+ margin-right: 2px;
+ padding-bottom: 1px;
+}
+.sbar{
+    width: 100%;
+    height: 11px;
+    display: flex;
+    
+}
+.skillbar{
+    width: 10%;
+    height: 10px;
+    background-color: black ;
+    border: 1px solid black;
+    margin-right: 2px;
+}
+.skillbarac{  
+    width: 10%;
+    height: 10px;
+    background-color:transparent    ;
+    margin-right: 2px;
+    border: 1px solid black;
+ }
+    
+
+
+
+.skill{
+width: 60px;
+height: 60px;
+}
+.skillde{
+width: 100px;
+height: 100px;
+}
+.skdesc{
+float: left;
+width: 50%;
+height: 250px;
+}
+
+.descont{
+    width: 100%;
+    height: 300px;
+    display: flex;
+}
+.desl{
+    float: left;
+    width: 49.6%;
+    height: 100px;
+}
+.desr{
+    float: right;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+width: 50%;
+    height: 100px;
+      line-height: 0;
+}
+.destx{
+    padding-top: 15px;
+    margin-top: 120px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    text-align: left;
+    padding-left: 15px;
+    border-top: 1px solid black;
+}

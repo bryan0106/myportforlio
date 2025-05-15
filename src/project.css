@@ -1,0 +1,110 @@
+
+.projcontainner{
+display: flex;
+    width: 50%;
+    height: 500px;
+
+}
+
+
+.fline{
+    width: 11.8%; height: 400px;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+
+}
+
+.progline{
+display: flex;
+flex-wrap:wrap;
+justify-content: space-between  ;
+margin-bottom: 30px;
+width: 100%;
+height: 100%;
+}
+.skillreq{
+width:100% ;
+height: 100px;
+display: flex;
+flex-wrap: wrap;
+overflow: auto;
+}
+.skreq{width: 50%; display: flex;}
+.circle img{width: 30px;height: 30px;}
+.circleac img{
+    width: 50px;height: 50px;
+}
+.circle img:hover{border: 1px solid blue;}
+
+
+
+
+.sline{
+     width: 59.8%; height: 400px;
+     text-align: left;
+}
+.tline{
+     width: 30%; height: 400px;
+}
+.napr{
+    
+    margin-top: 20px;
+    width:100% ;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.projcontent{
+    margin-top: 50px;
+       display: flex;
+            overflow-x: hidden;
+              scroll-snap-type: x mandatory;
+            padding: 1rem;
+            background-color: #f3f4f6;
+            position: relative;
+            cursor: grab; /* Change cursor for visual feedback */
+            scroll-snap-type: x mandatory;
+            justify-content: left;
+            
+      
+}
+.projbox{
+          flex-shrink: 0;
+  width: 140px;
+  height: 192px;
+  border-radius: 0.5rem;
+  margin-right: 50px;
+  background-color: #0c3b9a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  scroll-snap-align: start;
+  margin-bottom: 50px;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+}
+.spacer{width: 20px;
+height: 192px;
+background-color: #960707;}
+/* Style for when the project box is hovered over */
+.projbox:hover {
+  width: 180px;
+  height: 230px;
+  background-color: #9a530c;
+  cursor: pointer; /* Indicate it's interactive */
+}
+
+/* Optional: Style for when the project box is focused (for accessibility) */
+.projbox:focus {
+  width: 180px;
+  height: 230px;
+  background-color: #9a530c;
+  outline: none; /* Remove default focus outline for a custom one if needed */
+  /* Optionally add a custom focus style */
+  box-shadow: 0 0 0 2px orange;
+}
+
