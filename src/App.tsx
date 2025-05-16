@@ -8,7 +8,6 @@ import ExperienceSection from './experience';
 import SkillSection from './skills';
 import ProjectSetion from './project';
 
-
 import './App.css';
 import './topvab.css'
 import './botnav.css'
@@ -63,6 +62,7 @@ const FrontLoadPage: React.FC<FrontLoadPageProps> = ({ children, loadingText = '
                         />
                         <h1 className="profile-name">Bryan Dalawampu</h1>
                         <p className="profile-career">Junior Web Developer</p>
+                        <p>   </p>
                         <div className="loading-text">{loadingText}</div>
                         <div className="progress-bar-container">
                             <div className="progress-bar-background">

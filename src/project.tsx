@@ -5,14 +5,10 @@ function ProjectSetion ({activeSection}){
 if(activeSection !== "project"){return null;}
 
 const proj = [
-{id:1 , cat:'web',pname:"json creator",srx:"./s1.png",txt:"sample1",projid:"pr1", uses: "personal use"},
-{id:2 , cat:'web',pname:"json creator",srx:"./s2.png",txt:"sample2",projid:"pr2", uses: "personal use"},
-{id:3 , cat:'web',pname:"json creator",srx:"./s3.png",txt:"sample3",projid:"pr3", uses: "personal use"},
-{id:4 , cat:'web',pname:"json creator",srx:"./s4.png",txt:"sample4",projid:"pr4", uses: "personal use"},
-{id:5 , cat:'web',pname:"json creator",srx:"./s1.png",txt:"sample1",projid:"pr1", uses: "personal use"},
-{id:6 , cat:'web',pname:"json creator",srx:"./s2.png",txt:"sample2",projid:"pr2", uses: "personal use"},
-{id:7 , cat:'web',pname:"json creator",srx:"./s3.png",txt:"sample3",projid:"pr3", uses: "personal use"},
-{id:8 , cat:'web',pname:"json creator",srx:"./s4.png",txt:"sample4",projid:"pr4", uses: "personal use"}
+{id:1 , cat:'VBA macro',pname:"Order Scanner",srx1:"./s9.png",srx:"./pr1.png",txt:"Scanned order from list of other data. and give summary result of scanned data",projid:"pr1", uses: "company use"},
+{id:2 , cat:'VBA macro',pname:"LOTTO GENERATOR",srx1:"./s9.png",srx:"./pr1.png",txt:"Scanned order from list of other data. and give summary result of scanned data",projid:"pr2", uses: "personal use"},
+
+{id:3 , cat:'web',pname:"json creator",srx1:"./s3.png",srx:"./s3.png",txt:"sample3",projid:"pr3", uses: "personal use"}
 
 ];
 const scrollableDivRef = useRef<HTMLDivElement>(null);
@@ -50,13 +46,18 @@ const [proid, setproid] = useState(1);
   };
 
 
+
+  const [activeSkill, setactiveSkill] = useState('0');
+ const handleskill = (section: string) => {
+      setactiveSkill(section);
+  };
+
 return(
 <div className="projcontainner">
 <div className="fline">
     <div className="progline">
-
 {proj.map((item, _index) => (
-    <><div className={item.id === proid?"circleac":"circle"} onClick={() => getid(item.id)}>  <img src={item.srx} alt="" /></div></>
+    <><div className={item.id === proid?"circleac":"circle"} onClick={() => getid(item.id)}>  <img src={item.srx1} alt="" /></div></>
     ))}
     
 
@@ -72,30 +73,45 @@ return(
                       </>
 
                   ))}
-
+<p>Screenshots:</p>
 <div className="skillreq">
  {proj.map((item, _index) => (
-    <><div className="skreq"><img src={item.srx} alt="" /><p>{item.txt}</p></div></>
+    <><div className="skreq"><img src={item.srx} alt="" /></div></>
     ))}
 
 </div>
 
 <button>DOWNLOAD</button>
-
+<h1 className='bottomspace'> </h1>
 </div>
 
 <div className="tline">
 
 <div className='napr'>
-        <a>ALL</a>
-        <a>WebApp</a>
-         <a>Software</a>
-    <a>APP</a>
+     
+<a onClick={() => handleskill('0')}>All</a>
+  <a onClick={() => handleskill('web')}>Website</a>
+  <a onClick={() => handleskill('exe')}>Software</a>
+  <a onClick={() => handleskill('app')}>App</a>
+
+
+
+
         </div>
     <div className="projcontent" ref={scrollableDivRef}>
-{proj.map((item, _index) => (
+
+
+  {activeSkill === "0" ? ( 
+
+            proj.map((item, _index) => (
     <><div className="projbox" onClick={() => getid(item.id)}>  <img src={item.srx} alt="" /></div></>
-    ))}
+    ))
+                        
+                ): 
+                  proj.filter(skill => skill.cat === activeSkill) // Example: Filter by category
+                  .map((skill) => (
+                     <><div className="projbox" onClick={() => getid(skill.id)}>  <img className='projimg' src={skill.srx} alt="" /></div></>
+                   ))}
 
     </div>
 

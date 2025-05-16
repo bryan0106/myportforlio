@@ -50,10 +50,10 @@
   position: relative;
   min-height: 100vh;
   display: flex;
-  flex-direction:column; /* Changed to column */
-  align-content: center;
+  flex-direction: column;
+  align-items: center; /* Centers items horizontally */
+  justify-content: flex-start; /* Aligns items to the top */
   margin-top: 46px;
-  justify-content:flex-start;
 }
 
 .profile-container {
@@ -117,8 +117,14 @@
   border: 1px solid black;
 }
 
+.progress-text{line-height: 50px; height: 50px;}
+.joke h4{line-height: 50px;}
 
 @media (max-width: 600px) {
+.joke h4{line-height: 20px;}
+
+
+.progress-text{line-height: 30px;}
   .contact-info,
   .contact-info2 {
     position: fixed;

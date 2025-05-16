@@ -13,6 +13,20 @@ const [modalx, setmodalx] = useState('workleftx')
       setmodalx(section);
   };
 
+  const [workn, setworkn] = useState('third')
+ const worknn = (section: string) => {
+      setworkn(section);
+  };
+   const [worknam, setworknam] = useState('OFW (South Korea)')
+ const worknnam = (section: string) => {
+      setworknam(section);
+  };
+
+
+
+
+
+
 const [workexp, setworkexp] = useState<workexp[]>([]);
 
 useEffect(() => {
@@ -49,185 +63,122 @@ useEffect(() => {
 
 
   return (
-    <div id="experience" className="section-container">
+  
       <div className="workmc">
         <div className={modalx}>
-           <span onClick={() => setmodalx('workleftx')}>X</span>
+           <div className='closebtn' onClick={() => showmodal('workleftx')}> x</div>
           {activeWork === 'work1' && (
-            <div id="project" className="section-container">
-
-              <div className="wlcon">
-              <h3>  OFW South Korea (Factory Worker)</h3>
-                <p className="skt">Skills acquired:</p>
-                <ul>
-               { workdb.filter(workexp => workexp.cat === "third" &&  workexp.sub === "SKA" ) // Example: Filter by category
+           
+              <><div className="wlcon">
+            <h3>  {worknam}</h3>
+            <p className="skt">Skills acquired:</p>
+            <ul>
+              {workdb.filter(workexp => workexp.cat === workn && workexp.sub === "SKA") // Example: Filter by category
+                .map((workexp) => (
+                  <li key={workexp.id}>{workexp.content}</li>
+                ))}
+            </ul>
+          </div><div className="wlcon">
+              <p className="skt">Responsibilities:</p>
+              <ul>
+                {workdb.filter(workexp => workexp.cat === workn && workexp.sub === "RSP") // Example: Filter by category
                   .map((workexp) => (
                     <li key={workexp.id}>{workexp.content}</li>
-                   ))}
-                </ul>
-              </div>
-              <div className="wlcon">
-                <p className="skt">Responsibilities:</p>
-                <ul>
-                  { workdb.filter(workexp => workexp.cat === "third" &&  workexp.sub === "RSP" ) // Example: Filter by category
+                  ))}
+              </ul>
+            </div><div className="wlcon">
+              <p className="skt">IT Related Experience:</p>
+              <ul>
+                {workdb.filter(workexp => workexp.cat === workn && workexp.sub === "ITR") // Example: Filter by category
                   .map((workexp) => (
                     <li key={workexp.id}>{workexp.content}</li>
-                   ))}
-                </ul>
-              </div>
-              <div className="wlcon">
-                <p className="skt">IT Related Experience:</p>
-                <ul>
-                  { workdb.filter(workexp => workexp.cat === "third" &&  workexp.sub === "ITR" ) // Example: Filter by category
-                  .map((workexp) => (
-                    <li key={workexp.id}>{workexp.content}</li>
-                   ))}
-                </ul>
-              </div>
-            </div>
+                  ))}
+              </ul><h1> </h1>
+            </div></>
           )}
           {activeWork === 'work2' && (
-            <div id="project" className="section-container">
-              <div className="wlcon">
-                <h3> Kily.ph (SOLO IT staff)</h3>
-                <p className="skt">Skills acquired:</p>
-                <ul>
-                   { workdb.filter(workexp => workexp.cat === "Second" &&  workexp.sub === "SKA" ) // Example: Filter by category
+              <><div className="wlcon">
+            <h3> {worknam}</h3>
+            <p className="skt">Skills acquired:</p>
+            <ul>
+              {workdb.filter(workexp => workexp.cat === workn && workexp.sub === "SKA") // Example: Filter by category
+                .map((workexp) => (
+                  <li key={workexp.id}>{workexp.content}</li>
+                ))}
+            </ul>
+          </div><div className="wlcon">
+              <p className="skt">Responsibilities:</p>
+              <ul>
+                {workdb.filter(workexp => workexp.cat === workn && workexp.sub === "RSP") // Example: Filter by category
                   .map((workexp) => (
                     <li key={workexp.id}>{workexp.content}</li>
-                   ))}
-                </ul>
-              </div>
-              <div className="wlcon">
-                <p className="skt">Responsibilities: (SOLO IT Staff)</p>
-                <ul>
-                   { workdb.filter(workexp => workexp.cat === "Second" &&  workexp.sub === "RSP" ) // Example: Filter by category
-                  .map((workexp) => (
-                    <li key={workexp.id}>{workexp.content}</li>
-                   ))}
-                </ul>
-              </div>
-              <div className="wlcon">
-                <p className="skt">IT Related Experience:</p>
-                <ul>
-                   { workdb.filter(workexp => workexp.cat === "Second" &&  workexp.sub === "ITR" ) // Example: Filter by category
-                  .map((workexp) => (
-                    <li key={workexp.id}>{workexp.content}</li>
-                   ))}
-                </ul>
-              </div>
-            </div>
+                  ))}
+              </ul>
+            </div></>
           )}
-          {activeWork === 'work3' && (
-            <div id="project" className="section-container">
-              <div className="wlcon">
-               <h3>  Tambuting Pawnshop Head Office (IT Staff)</h3>
-                <p className="skt">Skills acquired:</p>
-                <ul>
-                  { workdb.filter(workexp => workexp.cat === "First" &&  workexp.sub === "SKA" ) // Example: Filter by category
-                  .map((workexp) => (
-                    <li key={workexp.id}>{workexp.content}</li>
-                   ))}
-                </ul>
-              </div>
-              <div className="wlcon">
-                <p className="skt">Responsibilities:</p>
-                <ul>
-                 { workdb.filter(workexp => workexp.cat === "First" &&  workexp.sub === "RSP" ) // Example: Filter by category
-                  .map((workexp) => (
-                    <li key={workexp.id}>{workexp.content}</li>
-                   ))}
-                </ul>
-              </div>
-              <div className="wlcon">
-                <p className="skt">IT Related Experience:</p>
-                { workdb.filter(workexp => workexp.cat === "First" &&  workexp.sub === "ITR" ) // Example: Filter by category
-                  .map((workexp) => (
-                    <li key={workexp.id}>{workexp.content}</li>
-                   ))}
-              </div>
-            </div>
-          )}
-          {activeWork === 'work4' && (
-            <div id="project" className="section-container">
-              <div className="wlcon">
-               <h3>  TESDA Calapan (OJT)</h3>
-                <p className="skt">Skills acquired:</p>
-                <ul>
-                 { workdb.filter(workexp => workexp.cat === "OJT" &&  workexp.sub === "SKA" ) // Example: Filter by category
-                  .map((workexp) => (
-                    <li key={workexp.id}>{workexp.content}</li>
-                   ))}
-                </ul>
-              </div>
-              <div className="wlcon">
-                <p className="skt">Responsibilities:</p>
-                <ul>
-                  { workdb.filter(workexp => workexp.cat === "OJT" &&  workexp.sub === "RSP" ) // Example: Filter by category
-                  .map((workexp) => (
-                    <li key={workexp.id}>{workexp.content}</li>
-                   ))}
-                </ul>
-              </div>
-            </div>
-          )}
-
+ <h1></h1>
           <h1></h1>
         </div>
         <div className="workright">
           <div className="workcon">
             <div className="workcr"></div>
             <div className="workt"  onClick={() => {
-  handleWork('work1');
-  setmodalx('workleft');
-}}>
+                                                      worknnam('OFW (South Korea)');
+                                                    worknn('third');
+                                                     handleWork('work1');
+                                                    showmodal('workleft');}}>
               <p className="whead">Third work (2019 -2024)</p>
-              Overseas Filipino Worker (South Korea)
-            </div>
+              <h2> OFW (South Korea)</h2>
+              <h3>FACTORY WORKER</h3>
+              <p>Suncheon Si Jeollanam Do South Korea. </p>
             
-
-
-
+            </div>
           </div>
           <div className="workcon">
             <div className="workcr"></div>
                  <div className="workt"  onClick={() => {
-  handleWork('work2');
-  setmodalx('workleft');
-}}>   <p className="whead">Second Work (2017 -2019)</p>
-              <p>
-                KILY.PH online shopping Corporation (IT STAFF) 7th Flr Azure
-                Business Center 1197 EDSA Katipunan Quezon City.
-              </p>
+                   worknnam('KILY.PH online shopping Corporation');
+                                                     worknn('Second');
+                                                     handleWork('work1');
+                                                    showmodal('workleft');}}>
+<p className="whead">Second Work (2017 -2019)</p>
+
+ <h2> KILY.PH online shopping Corporation</h2>
+              <h3>IT STAF(solo)</h3>
+              <p>  7th Flr Azure Business Center 1197 EDSA Katipunan Quezon City. </p>
+
             </div>
           </div>
           <div className="workcon">
             <div className="workcr"></div>
                 <div className="workt"  onClick={() => {
-  handleWork('work3');
-  setmodalx('workleft');
-}}>   <p className="whead">First Work (2015 -2017)</p>
-              <p>
-                TAMBUNTING GROUP OF COMPANIES 8thflr. 1840 Jacinta bldg. II, Sta.
-                Rita St. Brgy. Guadalupe Nuevo, Makati City
-              </p>
+                  worknnam('TAMBUNTING GROUP OF COMPANIES');
+                                                    worknn('First');
+                                                     handleWork('work1');
+                                                    showmodal('workleft');}}>
+               <p className="whead">First Work (2015 -2017)</p>
+             <h2> TAMBUNTING GROUP OF COMPANIES</h2>
+              <h3>IT STAFF</h3>
+              <p> 8thflr. 1840 Jacinta bldg. II, Sta. Rita St. Brgy. Guadalupe Nuevo, Makati City. </p>
             </div>
           </div>
           <div className="workcon1">
             <div className="workcr"></div>
                  <div className="workt"  onClick={() => {
-  handleWork('work4');
-  setmodalx('workleft');
-}}>  <p className="whead">On the Job Training (2014 - 2015)</p>
-              <p>
-                TECHNICAL EDUCATION AND SKILLS DEVELOPMENT AUTHORITY (TESDA)
-                Bldg. III Gov. Infantado St., SMV, Calapan City Oriental Mindoro
-              </p>
+                     worknnam('TESDA Calapan');
+                                                    worknn('OJT');
+                                                     handleWork('work2');
+                                                    showmodal('workleft');}}>
+                                                      
+          <p className="whead">On the Job Training (2014 - 2015)</p>
+          <h2> TESDA Calapan</h2>
+              <h3>OFFICE CLERK</h3>
+              <p>  Bldg. III Gov. Infantado St., SMV, Calapan City Oriental Mindoro. </p>
+              
             </div>
-          </div>
+          </div><h1 className='expsp'></h1>
         </div>
       </div>
-    </div>
   );
 }
 

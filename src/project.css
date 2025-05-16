@@ -1,17 +1,19 @@
-
+@media (min-width: 768px) {
 .projcontainner{
 display: flex;
-    width: 50%;
-    height: 500px;
+    width: 60%;
+    height: 666px;
 
 }
 
 
 .fline{
-    width: 11.8%; height: 400px;
+    width: 9.8%; height: auto;
     justify-content: center;
     align-items: center;
-    overflow: auto;
+    height: auto;
+    max-height: 400px;
+    overflow: hidden;
 
 }
 
@@ -26,31 +28,44 @@ height: 100%;
 .skillreq{
 width:100% ;
 height: 100px;
-display: flex;
-flex-wrap: wrap;
+display:flex;
+flex-direction: row;
 overflow: auto;
+float:left;
+bottom: 1px;
 }
 .skreq{width: 50%; display: flex;}
+
+.skreq img{width: auto;height: auto; border-radius: 0;border: 1px solid #096B68;margin-right: 5px;margin-bottom: 5px;}
 .circle img{width: 30px;height: 30px;}
 .circleac img{
     width: 50px;height: 50px;
 }
-.circle img:hover{border: 1px solid blue;}
+.circle img:hover{border: 1px solid #096B68;}
 
-
+.projbox img{height: 100%;width:100% ;border-radius: 10px;  border: 1px solid black;}
 
 
 .sline{
-     width: 59.8%; height: 400px;
+     width: 59.8%; 
+     height: 500px;
      text-align: left;
+     padding-left: 10px;
+     border-left:1px solid #096B68;
+        padding-right: 10px;
+     border-right :1px solid #096B68;
 }
 .tline{
-     width: 30%; height: 400px;
+    
+     width: 30%; height: auto;
+     max-height: 666px;
+     margin-left: 10px;
 }
 .napr{
     
     margin-top: 20px;
     width:100% ;
+    max-width: 100%;
     height: 20px;
     display: flex;
     justify-content: space-between;
@@ -67,16 +82,151 @@ overflow: auto;
             cursor: grab; /* Change cursor for visual feedback */
             scroll-snap-type: x mandatory;
             justify-content: left;
-            
+            height: 300px;
       
 }
 .projbox{
           flex-shrink: 0;
-  width: 140px;
-  height: 192px;
+  width: 200px;
+  height: 250px;
   border-radius: 0.5rem;
   margin-right: 50px;
-  background-color: #0c3b9a;
+  background-color: #90D1CA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  scroll-snap-align: start;
+  margin-bottom: 50px;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  overflow: hidden;
+
+}
+.projbox:hover {
+  width: 250px;
+  height: 300px;
+  background-color: #129990;
+  cursor: pointer; /* Indicate it's interactive */
+}
+
+/* Optional: Style for when the project box is focused (for accessibility) */
+.projbox:focus {
+  width: 180px;
+  height: 230px;
+  background-color: #129990;
+  outline: none; /* Remove default focus outline for a custom one if needed */
+  /* Optionally add a custom focus style */
+
+}
+}
+
+@media (max-width: 768px) {
+
+
+.projcontainner{
+display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    height: auto;
+
+}
+
+
+.fline{
+visibility: hidden;
+    width: 10%;
+     height: 1px;
+     display:inline-block;
+     flex-direction: row ;
+     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-height: 70px;
+
+}
+
+.progline{
+  visibility: hidden;
+  display: flex;
+flex-wrap:wrap;
+justify-content: space-between  ;
+margin-bottom: 30px;
+
+ overflow: auto;
+}
+.skillreq{
+width:100% ;
+height: 100%;
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+align-items: center;
+}
+.skreq img{width: 200px;height: 120px; border-radius: 0;border: 1px solid #096B68;margin-right: 5px;margin-bottom: 5px;}
+
+.skreq{width: 49%; display: flex;}
+.circle img{width: 30px;height: 30px;}
+.circleac img{
+    width: 50px;height: 50px;
+}
+.circle img:hover{border: 1px solid #096B68;}
+
+
+
+
+.sline{
+  order: 3;
+     width: 100%; 
+     height: auto;
+     text-align: left;
+     display: flex;
+     flex-direction: column;
+     margin-top: 1px;
+}
+.tline{
+    order: 2;
+     width: 100%; height: auto;
+     max-height: auto ;
+  
+}
+.napr{
+    
+    margin-top: -10px;
+    width:90% ;
+    max-width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.projcontent{
+    margin-top: 8px;
+       display: flex;
+       overflow: scroll;
+            padding: 1rem;
+            height: 120px;
+            background-color: #f3f4f6;
+            position: relative;
+            cursor: grab; /* Change cursor for visual feedback */
+        width: 300px;
+            justify-content: left;
+        
+      
+}
+.projbox img{
+width: 100%;
+  height: 100%;
+border-radius: 0;
+}
+.projbox{
+  margin-top: 1px;
+          flex-shrink: 0;
+ width: 180px;
+  height: 100px; 
+  border-radius: 0.5rem;
+  margin-right: 50px;
+  background-color: #90D1CA;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -87,24 +237,17 @@ overflow: auto;
   transition: width 0.3s ease-in-out, height 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
 }
-.spacer{width: 20px;
-height: 192px;
-background-color: #960707;}
-/* Style for when the project box is hovered over */
-.projbox:hover {
-  width: 180px;
-  height: 230px;
-  background-color: #9a530c;
-  cursor: pointer; /* Indicate it's interactive */
-}
+
 
 /* Optional: Style for when the project box is focused (for accessibility) */
-.projbox:focus {
-  width: 180px;
-  height: 230px;
-  background-color: #9a530c;
+.projbox:hover {
+  width: 200px;
+  height: 120px;
+  background-color: #129990;
   outline: none; /* Remove default focus outline for a custom one if needed */
   /* Optionally add a custom focus style */
-  box-shadow: 0 0 0 2px orange;
+}
+.nextprev{visibility: hidden;}
+.bottomspace{ height: 10px;}
 }
 

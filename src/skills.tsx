@@ -66,8 +66,6 @@ const levelbar = [
     <div className="skillcontainer">
       <div className="Skleft">
 
- 
-
 
 <button className="tablinks" onClick={() => handleskill('0')}>All</button>
   <button className="tablinks" onClick={() => handleskill('web')}>Website</button>
@@ -96,15 +94,16 @@ const levelbar = [
                    ))}
         </div>
         <div className="skdesc">
+          <h3>DESCRIPITION</h3>
         { skilldb.filter(skill => skill.id === skillid) // Example: Filter by category
                   .map((skill) => (
                     <><div className="desl"><img key={skill.id} className="skillde" src={skill.source} alt={skill.name} /></div>
                     
                   <div className="desr">  <h3>{skill.name}</h3>
-                       <p>1 month : 2 project</p>
+                       <p>{skill.exp} : {skill.proj}</p>
 
        <div className="sbar">
-         {levelbar.map((item, index) => (
+         {levelbar.map((_item, index) => (
   <div
     className={
       skill.level === 'Beginner' && index < 2?
@@ -122,13 +121,14 @@ const levelbar = [
          
                     
                     </div>
+                     <div className="destx">{skill.context}</div>
                     </>
                     
                    ))}
                    
     
         
-        <div className="destx">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, maxime sunt repellendus soluta aspernatur nostrum necessitatibus rerum vitae nam ut explicabo voluptatum est voluptas consequuntur quibusdam iusto adipisci. Saepe, aliquid.10</div>
+       
      
 
 

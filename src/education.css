@@ -137,6 +137,9 @@ top: 30px;
 
 }
 @media (max-width: 768px) {
+    
+    
+    .scbac3 h3, .cra h4{line-height: 18px;}
     .ed{
   
         width: 100%;

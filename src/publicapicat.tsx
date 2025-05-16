@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './App.css';
 
 interface randomjokeapi {
   setup: string;
@@ -43,7 +44,7 @@ const JokeAPi: React.FC = ({setans}) => {
   }
 
   return (
-    <div>
+    <div className='joke'>
       <h3>Here's a Joke for You:</h3>
       {randomjoke ? <h4>{randomjoke}</h4> : <h4>No Joke for today</h4>}
 

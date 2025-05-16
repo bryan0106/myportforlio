@@ -1,9 +1,72 @@
+@media (min-width: 768px) {
+.contactcontainer{
+  width: 50%;
+  display: flex;
+  height: auto;
+   font-family: 'Segoe UI Black'
+}
+
+.contactl{
+width: 50%;
+height: auto;
+text-align: left;
+padding-left: 12px;
+}
+
+
+.contactl h2,h3,h4{
+line-height: 6px;
+}
+.contactl h2{
+margin-top: 15px;
+padding-bottom: 12px;
+}
+.contactl .email{
+margin-top: 15px;
+padding-bottom: 5px;
+margin-bottom: 7px;
+}
+.contactl .email2{
+margin-top: 10px;
+padding-bottom: 5px;
+}
+
+.contactl h4{
+  opacity: .5;
+}
+.social-icons{
+  padding-bottom:0px;
+  margin-bottom: 2px;
+  height: 40px;
+}
+.address{
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 18px;
+  height: 50px;
+}
+
+
+
+.contactr{
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+
+
 
 .flip-card {
     background-color: transparent;
-    width: 40%;
-    height: 244px;
+    width: 250px;
+    height: 140px;
     perspective: 1000px;
+    margin-top: 0;
     
   }
   
@@ -15,6 +78,7 @@
     transition: transform 0.6s;
     transform-style: preserve-3d;
     box-shadow: transparent;
+    
     
   }
   
@@ -32,7 +96,7 @@
   
   
   .flip-card-front img{
-    width: 63%;
+    width: 95%;
     height: auto;
     border-radius: 0   ;
   }
@@ -41,84 +105,158 @@
     transform: rotateY(180deg);
   }
   .flip-card-back img{
-    width: 63%;
+    width: 95%;
     height:auto;
  border-radius: 0;
   }
-
-.contactD{
-width: 90%;
-max-width: 100%;
-height: 500px;
-text-align: center;
+.sendus{
+width: 100%;
+height: auto;
+margin-top: 20px;
+align-items: center;
 }
-
-.conSo .social-icons{
-    padding-left: 35%;
+.fomr{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+}
+input{height: 20px;}
 
 }
-
-
-
-
-
-
   @media (max-width: 768px) {
-    .flip-card {
-        background-color: transparent;
-        width: 100%;
-        height: 160px;
-        perspective: 1000px;
-        
-      }
-      
-      .flip-card-inner {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        transition: transform 0.6s;
-        transform-style: preserve-3d;
-        box-shadow: transparent;
-        
-      }
-      
-      .flip-card:hover .flip-card-inner {
-        transform: rotateY(180deg);
-      }
-      
-      .flip-card-front, .flip-card-back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-      }
-      
-      
-      .flip-card-front img{
-        width: 63%;
-        height: auto;
-        border-radius: 0   ;
-      }
-      .flip-card-back {
-        background-color: transparent;
-        transform: rotateY(180deg);
-      }
-      .flip-card-back img{
-        width: 63%;
-        height:auto;
-     border-radius: 0;
-      }
 
-      .contactD{
-        width: 100%;
-        max-width: 100%;
-        height: 500px;
-     text-align: center;
-        }
-        .conSo .social-icons{
-            padding-left: 30%;
 
-        }
+.contactcontainer{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+   font-family: 'Segoe UI Black'
+}
+
+.contactl{
+  order: 1;
+width: 100%;
+height: auto;
+text-align: left;
+padding-left: 12px;
+}
+
+
+.contactl h2,h3,h4{
+line-height: 6px;
+}
+.contactl h2{
+margin-top: 10px;
+padding-bottom: 12px;
+}
+.contactl .email{
+margin-top: 10px;
+padding-bottom: 5px;
+margin-bottom: 7px;
+}
+.contactl .email2{
+margin-top: 2px;
+padding-bottom: 5px;
+}
+
+.contactl h4{
+  opacity: .5;
+}
+.social-icons{
+  padding-bottom:0px;
+  margin-bottom: 2px;
+  height: 40px;
+}
+.address{
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 18px;
+  height: 50px;
+}
+
+
+
+.contactr{
+  order: 2;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contactr h2,p{
+line-height: 6px;
+}
+
+
+
+
+
+.flip-card {
+    background-color: transparent;
+    width: 250px;
+    height: 140px;
+    perspective: 1000px;
+    margin-top: 0;
+    
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: transparent;
+    
+    
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  
+  .flip-card-front img{
+    width: 95%;
+    height: auto;
+    border-radius: 0   ;
+  }
+  .flip-card-back {
+    background-color: transparent;
+    transform: rotateY(180deg);
+  }
+  .flip-card-back img{
+    width: 95%;
+    height:auto;
+ border-radius: 0;
+  }
+.sendus{
+width: 100%;
+height: auto;
+margin-top: 20px;
+align-items: center;
+}
+.fomr{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+}
+textarea{height: 70px;width: 55%;}
+input{height: 20px;}
+ .space{height: 50px;}
   }
