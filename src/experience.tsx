@@ -4,7 +4,14 @@ import workdb from './data/workexp.json'
 import './Experience.css'
 
 
-function ExperienceSection({ activeSection, activeWork, handleWork }) {
+interface ExperienceSectionProps{
+  activeSection:string;
+}
+
+
+
+  interface ExperienceSectionProps{activeSection:string;}
+function ExperienceSection({ activeSection}:ExperienceSectionProps){
   if (activeSection !== 'experience') {
     return null; // Or render something else if needed
   }
@@ -22,12 +29,15 @@ const [modalx, setmodalx] = useState('workleftx')
       setworknam(section);
   };
 
+const [activeWork, setactiveWork] = useState('work1');
+ const handleWork = (section: string) => {
+      setactiveWork(section);
+  };
 
 
 
 
-
-const [workexp, setworkexp] = useState<workexp[]>([]);
+const [, setworkexp] = useState<workexp[]>([]);
 
 useEffect(() => {
     const fetchWorkExp = async () => { // Changed function name to fetchWorkExp

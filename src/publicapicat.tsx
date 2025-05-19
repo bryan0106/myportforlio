@@ -6,11 +6,20 @@ interface randomjokeapi {
   setup: string;
   punchline : string;
   id: number;
+
 }
 
-const JokeAPi: React.FC = ({setans}) => {
+const JokeAPi: React.FC = () => {
   const [randomjoke, setrandomjoke] = useState<string | null>(null);
    const [punchline, setpunchline] = useState<string | null>(null);
+const [showpun , setshowpun] = useState(false);
+
+useEffect(()=>{
+const timer = setTimeout(() => {
+  setshowpun(true);
+}, 8000);
+return()=> clearTimeout(timer);
+},[]);
 
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -48,7 +57,7 @@ const JokeAPi: React.FC = ({setans}) => {
       <h3>Here's a Joke for You:</h3>
       {randomjoke ? <h4>{randomjoke}</h4> : <h4>No Joke for today</h4>}
 
-      {setans >= "80" ? <h3>{punchline}  ..... &#128514; ha ha ha </h3> : <h3>...</h3>}
+      { showpun? <h3>{punchline}  ..... &#128514; ha ha ha </h3>:<h3> . . . wait </h3> }
     </div>
   );
 };

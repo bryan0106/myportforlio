@@ -1,4 +1,4 @@
-import React, { useState ,useEffect } from 'react';
+import { useState } from 'react';
 import './topvab.css'
 import './botnav.css'
 
@@ -7,7 +7,6 @@ function Navigation() {
 
  const [showMobileMenu, setShowMobileMenu] = useState(false);
     const [activeSection, setActiveSection] = useState('about'); // State to track the active section
-    const [activeWork, setactiveWork] = useState('work1'); // State to track the active section
     const toggleMenu = () => {
         setShowMobileMenu(!showMobileMenu);
     };

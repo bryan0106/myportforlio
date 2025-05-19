@@ -1,4 +1,4 @@
-import { useEffect, useState, type Key } from 'react';
+import { useEffect, useState } from 'react';
 import './skills.css';
 import type { skills } from './types/skills';
 import skilldb from './data/skills.json'
@@ -29,7 +29,7 @@ const [skillid, setskillid] = useState('0');
 
 
   
-const [skills, setskills] = useState<skills[]>([]);
+const [, setskills] = useState<skills[]>([]);
 useEffect(()=>{
 const fetchskill = async ()=>{
 try{

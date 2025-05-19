@@ -3,7 +3,7 @@ import workdb from '../data/workexp.json';
 
 
 const API_DELAY=500;
-export const getAllwork =():Promise<workexp[]>{
+export const getAllwork =():Promise<workexp[]>=>{
 return new Promise((resolve)=> {
 setTimeout(() => {
     resolve(workdb as unknown as workexp[]);

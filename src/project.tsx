@@ -1,7 +1,10 @@
 import { useRef, useState } from 'react';
 import './project.css'
 
-function ProjectSetion ({activeSection}){
+
+
+interface ProjectSetionProps{activeSection:string;}
+function ProjectSetion({activeSection}:ProjectSetionProps){
 if(activeSection !== "project"){return null;}
 
 const proj = [

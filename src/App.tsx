@@ -73,7 +73,7 @@ const FrontLoadPage: React.FC<FrontLoadPageProps> = ({ children, loadingText = '
                             </div>
                             <div className="progress-text">
                                 {progress < 100 ? `Loading: ${progress}%` : 'Loaded!'}
-                                <JokeAPi setans={progress < 100 ? `${progress}` : 'Loaded!'}/>
+                                <JokeAPi />
                             </div>
                         </div>
                     </div>
@@ -142,7 +142,7 @@ function MainSection() {
   
 const [showMobileMenu, setShowMobileMenu] = useState(false);
     const [activeSection, setActiveSection] = useState('about'); // State to track the active section
-   const [activeWork, setactiveWork] = useState('work1'); // State to track the active section
+   const [] = useState('work1'); // State to track the active section
     
    
     const toggleMenu = () => {
@@ -152,9 +152,6 @@ const [showMobileMenu, setShowMobileMenu] = useState(false);
         setActiveSection(section);
         setShowMobileMenu(false); // Close mobile menu when an item is clicked
     };
-  const handleWork = (section: string) => {
-      setactiveWork(section);
-  };
 
 
   return (
@@ -193,9 +190,7 @@ const [showMobileMenu, setShowMobileMenu] = useState(false);
  <EducSection activeSection={activeSection}/>
  
                  <ExperienceSection
-                   activeSection={activeSection}
-                   activeWork={activeWork}
-                   handleWork={handleWork}/>
+                   activeSection={activeSection}/>
 <SkillSection activeSection={activeSection}/>
 <ContactSection activeSection={activeSection}/>
  <ProjectSetion activeSection={activeSection}/>

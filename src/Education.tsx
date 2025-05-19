@@ -1,6 +1,7 @@
-import React from "react";
 import './education.css'
-function EducSection({activeSection}){
+
+interface EducSectionProps{activeSection:string;}
+function EducSection({activeSection}:EducSectionProps){
     if(activeSection !== 'education'){return null;}
 
     return(
