@@ -86,6 +86,12 @@ border-bottom: 1px solid;
     
     border: 1px solid black;
 }
+.workt:hover{
+    width: 100%;
+    height: auto;
+    background-color: #FFFBDE;
+
+}
 .closebtn{
         visibility:hidden  ; 
     }
@@ -96,6 +102,16 @@ border-bottom: 1px solid;
 }
 
 @media (max-width: 768px) {
+
+.workcon:hover , .workcon1:hover{
+    width: 100%;
+    height: auto;
+    background-color: #FFFBDE;
+
+}
+
+
+
     .workmc{
      
         width: 100%;

@@ -208,8 +208,8 @@ overflow: scroll;
     display: flex;
     flex-direction: column;
     text-align: left;
-width: 62%;
-    height: 120px;
+        width: 62%;
+    height: auto;
       line-height: 0;
 }
 .destx{

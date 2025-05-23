@@ -14,33 +14,32 @@ function Navigation() {
         setActiveSection(section);
         setShowMobileMenu(false); // Close mobile menu when an item is clicked
     };
-    console.log(activeSection)
   return (
                 <><nav className={showMobileMenu ? 'topnav responsive' : 'topnav'}>
 
-      <a href="#" className={activeSection === 'about' ? 'active' : ''} onClick={() => handleNavClick('about')}>About</a>
-      <a href="#" className={activeSection === 'education' ? 'active' : ''} onClick={() => handleNavClick('education')}>Education</a>
-      <a href="#" className={activeSection === 'skill' ? 'active' : ''} onClick={() => handleNavClick('skill')}>Skill</a>
-      <a href="#" className={activeSection === 'experience' ? 'active' : ''} onClick={() => handleNavClick('experience')}>Experience</a>
-      <a href="#" className={activeSection === 'project' ? 'active' : ''} onClick={() => handleNavClick('project')}>Project</a>
-      <a href="#" className={activeSection === 'contact' ? 'active' : ''} onClick={() => handleNavClick('contact')}>Contact</a>
-      <a href="#hamburger" className="icon" onClick={toggleMenu}>
+      <a href="About" className={activeSection === 'about' ? 'active' : ''} onClick={() => handleNavClick('about')}>About</a>
+      <a href="Education" className={activeSection === 'education' ? 'active' : ''} onClick={() => handleNavClick('education')}>Education</a>
+      <a href="Skills" className={activeSection === 'skill' ? 'active' : ''} onClick={() => handleNavClick('skill')}>Skill</a>
+      <a href="Experiences" className={activeSection === 'experience' ? 'active' : ''} onClick={() => handleNavClick('experience')}>Experience</a>
+      <a href="Projects" className={activeSection === 'project' ? 'active' : ''} onClick={() => handleNavClick('project')}>Project</a>
+      <a href="Contact" className={activeSection === 'contact' ? 'active' : ''} onClick={() => handleNavClick('contact')}>Contact</a>
+      <a href="" className="icon" onClick={toggleMenu}>
         &#9776;
       </a>
     </nav><div className="icon-bar">
-        <a className={activeSection === 'about' ? 'active' : ''} href="#" onClick={() => handleNavClick('about')}>
+        <a className={activeSection === 'about' ? 'active' : ''} href="About" onClick={() => handleNavClick('about')}>
           <img src="/acc.png" alt="Facebook" />
         </a>
-        <a className={activeSection === 'education' ? 'active' : ''} href="#" onClick={() => handleNavClick('education')}>
+        <a className={activeSection === 'education' ? 'active' : ''} href="Education" onClick={() => handleNavClick('education')}>
           <img src="/cv.png" alt="CV" />
         </a>
-        <a className={activeSection === 'experience' ? 'active' : ''} href="#" onClick={() => handleNavClick('experience')}>
+        <a className={activeSection === 'experience' ? 'active' : ''} href="Experiences" onClick={() => handleNavClick('experience')}>
           <img src="/exp.png" alt="Experience" />
         </a>
-        <a className={activeSection === 'skill' ? 'active' : ''} href="#" onClick={() => handleNavClick('skill')}>
+        <a className={activeSection === 'skill' ? 'active' : ''} href="Skills" onClick={() => handleNavClick('skill')}>
           <img src="/cert.png" alt="Certifications" />
         </a>
-        <a className={activeSection === 'contact' ? 'active' : ''}  href="#" onClick={() => handleNavClick('contact')}>
+        <a className={activeSection === 'contact' ? 'active' : ''}  href="Contact" onClick={() => handleNavClick('contact')}>
           <img src="/cont.png" alt="Contact" />
         </a>
       </div></>

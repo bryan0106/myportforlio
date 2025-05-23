@@ -112,10 +112,10 @@ justify-content: center;
     height: 10px;
   }
   
-  .barIn{width: 70%; height: 9px; background-color: #2196F3;}
-  .barPh{width: 70%; height: 9px; background-color: #2196F3;}
-  .barSoc{width: 50%; height: 9px; background-color: #2196F3;}
-  .barSp{width: 40%; height: 9px; background-color: #2196F3;}
+  .barIn{width: 55%; height: 9px; background-color: #2196F3;}
+  .barPh{width: 60%; height: 9px; background-color: #2196F3;}
+  .barSoc{width: 25%; height: 9px; background-color: #2196F3;}
+  .barSp{width: 50%; height: 9px; background-color: #2196F3;}
 
 
   .conta3 .skill

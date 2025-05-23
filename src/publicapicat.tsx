@@ -34,7 +34,7 @@ return()=> clearTimeout(timer);
         setrandomjoke(response.data.setup);
         setpunchline(response.data.punchline);
       } catch (error: any) {
-        setError('Failed to fetch cat fact.');
+        setError('Sorry NO Joke for today.');
         console.error('Error fetching cat fact:', error);
       } finally {
         setLoading(false);
@@ -45,7 +45,7 @@ return()=> clearTimeout(timer);
   }, []); // Empty dependency array means this effect runs once after the initial render
 
   if (loading) {
-    return <p>Fetching a purr-fect fact...</p>;
+    return <p>Fetching Random Joke..</p>;
   }
 
   if (error) {

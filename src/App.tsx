@@ -61,7 +61,7 @@ const FrontLoadPage: React.FC<FrontLoadPageProps> = ({ children, loadingText = '
                             className="profile-picture"
                         />
                         <h1 className="profile-name">Bryan Dalawampu</h1>
-                        <p className="profile-career">Junior Web Developer</p>
+                        <p className="profile-career">Programmer</p>
                         <p>   </p>
                         <div className="loading-text">{loadingText}</div>
                         <div className="progress-bar-container">
@@ -92,7 +92,7 @@ const FrontLoadPage: React.FC<FrontLoadPageProps> = ({ children, loadingText = '
                                 <img src="/fb.png" alt="Facebook" className="social-icon" />
                             </a>
                             <a
-                                href="https://www.instagram.com/yourusername"
+                                href="https://www.instagram.com/brn16950"
                                 className="icon-link"
                                 aria-label="Instagram"
                                 target="_blank"
@@ -101,7 +101,7 @@ const FrontLoadPage: React.FC<FrontLoadPageProps> = ({ children, loadingText = '
                                 <img src="/inst.png" alt="Instagram" className="social-icon" />
                             </a>
                             <a
-                                href="https://www.tiktok.com/@yourusername"
+                                href="https://www.tiktok.com/@bry"
                                 className="icon-link tiktok-bg"
                                 aria-label="TikTok"
                                 target="_blank"
@@ -110,7 +110,7 @@ const FrontLoadPage: React.FC<FrontLoadPageProps> = ({ children, loadingText = '
                                 <img src="/tiktok.png" alt="TikTok" className="social-icon" />
                             </a>
                             <a
-                                href="https://www.linkedin.com/in/yourprofileurl"
+                                href="https://www.linkedin.com/in/bryan"
                                 className="icon-link"
                                 aria-label="LinkedIn"
                                 target="_blank"
@@ -122,10 +122,19 @@ const FrontLoadPage: React.FC<FrontLoadPageProps> = ({ children, loadingText = '
                     </div>
                     <div className="contact-info2">
                         <div className="contact-details">
-                            <p>Email: dalawampubryan06@gmail.com</p>
+                            <p>Email:dalawampubryan06@gmail.com</p>
                         </div>
                         <div className="social-links">
-                            <a href="[GitHub Link]">GitHub</a>
+                             <a
+                                href=""
+                                className="icon-link"
+                                aria-label="LinkedIn"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                GitHub
+                            </a>
+                            
                         </div>
                     </div>
                 </div>

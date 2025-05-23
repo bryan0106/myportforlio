@@ -39,10 +39,9 @@ const AboutSection: React.FC<{ activeSection: string }> = ({ activeSection }) =>
         return <div>Loading skills...</div>; // Improved loading message
     }
 
-    if (error && activeSection === 'about') {
-        return <div>Error: {error}</div>;
-    }
-
+    if (error && activeSection === 'about') 
+      {  return <div>Error: {error}</div>;}
+   
     if (activeSection !== 'about') {
         return null;
     }
